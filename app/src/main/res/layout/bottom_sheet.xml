@@ -9,5 +9,21 @@
     android:background="@color/white"
     app:behavior_peekHeight="25dp"
     app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+<RelativeLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:background="@color/white">
+       <ImageView
+           android:layout_width="30dp"
+           android:layout_height="5dp"
+           android:layout_centerHorizontal="true"
+           android:layout_marginTop="3.5dp"
+           android:src="@drawable/datepicker"
+           />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:src="@drawable/bottomswipe"/>
+   </RelativeLayout>
    
 </LinearLayout>
