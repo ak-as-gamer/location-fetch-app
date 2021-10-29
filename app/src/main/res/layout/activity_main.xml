@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white"
+    >
+
+   <ImageView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:minHeight="85dp"
+       android:src="@drawable/upper_background"
+       android:id="@+id/backgroundupper"/>
+
+   <ImageView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:minHeight="24dp"
+       android:minWidth="24dp"
+       android:layout_marginTop="50dp"
+       android:layout_marginLeft="17dp"
+       android:src="@drawable/ic_baseline_arrow_back_ios_24"
+
+       />
+
+   <Button
+       android:layout_width="54dp"
+       android:layout_height="23dp"
+       app:backgroundTint="@color/white"
+       android:background="@drawable/datepicker"
+       android:minWidth="54dp"
+       android:minHeight="20dp"
+       android:layout_alignParentRight="true"
+       android:layout_marginRight="20dp"
+       android:layout_marginTop="52dp"
+       android:textColor="@color/theme_blue"
+       android:textAllCaps="false"
+       android:textSize="10sp"
+       android:text="Date"
+       android:includeFontPadding="false"
+       android:padding="0dp"
+       android:id="@+id/btndate"
+
+       />
+
+   <ImageView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:minHeight="90dp"
+       android:layout_below="@id/backgroundupper"
+       android:src="#f8f8f8"
+       android:alpha="50"
+       android:id="@+id/cardviewbackground"
+       />
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="73dp"
+    android:layout_below="@id/backgroundupper"
+    android:minHeight="73dp"
+    app:cardBackgroundColor="@color/white"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginLeft="15dp"
+    app:cardElevation="1dp"
+    app:cardCornerRadius="10dp">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="73dp">
+  <com.makeramen.roundedimageview.RoundedImageView
+      android:layout_width="46dp"
+      android:layout_height="46dp"
+      android:src="@drawable/profileimg"
+      app:riv_oval="true"
+      app:riv_border_color="@color/black"
+      app:riv_border_width="0.5dp"
+      android:layout_centerVertical="true"
+      android:layout_marginLeft="18dp"
+      android:id="@+id/userimg"
+      />
+
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_toRightOf="@id/userimg"
+    android:layout_marginTop="10dp"
+    android:text="Narendra Kumar"
+    android:textColor="#458FB9"
+    android:textSize="16sp"
+    android:id="@+id/username"
+    />
+   <TextView
+       android:layout_width="70dp"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/username"
+       android:layout_toRightOf="@id/userimg"
+       android:layout_marginLeft="8dp"
+       android:text="Login -"
+       android:id="@+id/login"
+       android:textSize="12sp"
+       android:textColor="@color/black"/>
+    <TextView
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login"
+        android:layout_toRightOf="@id/userimg"
+        android:layout_marginLeft="8dp"
+        android:text="Logout -"
+        android:id="@+id/logout"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10:00"
+        android:layout_below="@id/username"
+        android:id="@+id/userlogintime"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_toRightOf="@id/login"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="07:00"
+        android:layout_below="@id/userlogintime"
+        android:layout_toRightOf="@id/logout"
+        android:textColor="@color/black"
+        android:textSize="12sp"/>
+
+</RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
+<fragment
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/cardviewbackground"
+    android:layout_marginBottom="25dp"
+    android:id="@+id/map"/>
+
+
+
+</RelativeLayout>
